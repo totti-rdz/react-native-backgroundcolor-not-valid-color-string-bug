@@ -11,8 +11,13 @@ export default function App() {
     <>
       <StatusBar style="auto" />
       <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen name="home" component={HomeScreen} options={{ title: "Home" }} />
+        <Stack.Navigator
+          screenOptions={{
+            // missing hashtag in color hex code doesn't throw an error but leads to weird overlapping of screens while navigating
+            contentStyle: { backgroundColor: "ffffff" },
+          }}
+        >
+          <Stack.Screen name="home" component={HomeScreen} options={{ title: "Home", headerShown: false }} />
           <Stack.Screen name="secondary" component={SecondaryScreen} options={{ title: "Secondary" }} />
         </Stack.Navigator>
       </NavigationContainer>
