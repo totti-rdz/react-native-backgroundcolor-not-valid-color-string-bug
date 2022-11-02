@@ -14,7 +14,7 @@ export default function App() {
         <Stack.Navigator
           screenOptions={{
             // missing hashtag in color hex code doesn't throw an error but leads to weird overlapping of screens while navigating
-            contentStyle: { backgroundColor: "ffffff" },
+            contentStyle: { backgroundColor: "not-a-color" },
           }}
         >
           <Stack.Screen name="home" component={HomeScreen} options={{ title: "Home", headerShown: false }} />
