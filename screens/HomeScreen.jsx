@@ -1,8 +1,8 @@
-import { Platform, Pressable, StyleSheet, View, Text } from "react-native";
+import { StyleSheet, View, Text } from "react-native";
 import Button from "../components/Button";
 
-const HomeScreen = () => {
-  const handlePress = () => console.log("hello from console");
+const HomeScreen = ({ navigation }) => {
+  const handlePress = () => navigation.navigate("secondary");
   return (
     <View style={styles.container}>
       <Text style={styles.text}>Hello world!</Text>
@@ -22,5 +22,4 @@ const styles = StyleSheet.create({
     fontSize: 32,
     fontWeight: "bold",
   },
-  
 });
