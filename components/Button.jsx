@@ -1,6 +1,6 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 
-const Button = ({onPress}) => {
+const Button = ({ onPress }) => {
   return (
     <View style={styles.buttonContainer}>
       <Pressable
@@ -9,7 +9,7 @@ const Button = ({onPress}) => {
         onPress={onPress}
       >
         <View style={styles.buttonInnerContainer}>
-          <Text>Click me!</Text>
+          <Text style={styles.text}>Click me!</Text>
         </View>
       </Pressable>
     </View>
@@ -29,5 +29,8 @@ const styles = StyleSheet.create({
   },
   buttonInnerContainer: {
     margin: 8,
+  },
+  text: {
+    color: "white",
   },
 });
