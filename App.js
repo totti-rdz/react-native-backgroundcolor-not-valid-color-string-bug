@@ -11,14 +11,14 @@ export default function App() {
     <>
       <StatusBar style="auto" />
       <NavigationContainer>
-        <Stack.Navigator
-          screenOptions={{
-            // invalid color string doesn't throw an error but leads to weird overlapping of screens while navigating
-            contentStyle: { backgroundColor: "test-no-color" },
-          }}
-        >
+        <Stack.Navigator>
           <Stack.Screen name="home" component={HomeScreen} options={{ title: "Home", headerShown: false }} />
-          <Stack.Screen name="secondary" component={SecondaryScreen} options={{ title: "Secondary" }} />
+          <Stack.Screen
+            name="secondary"
+            component={SecondaryScreen}
+            // invalid color string doesn't throw an error but leads to weird overlapping of screens while navigating
+            options={{ title: "Secondary", contentStyle: { backgroundColor: "test-no-color" } }}
+          />
         </Stack.Navigator>
       </NavigationContainer>
     </>
